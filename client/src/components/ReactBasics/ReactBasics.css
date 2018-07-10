@@ -1,0 +1,9 @@
+.react-basics-container {
+  margin: 40px auto;
+  width: 85%;
+  max-width: 750px;
+}
+
+.react-basics-container ul li {
+  margin-left: 40px;
+}

@@ -1,0 +1,36 @@
+.homepage-container {
+  width: 85%;
+  max-width: 750px;
+  margin: 40px auto;
+  text-align: justify;
+}
+
+table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+table tr {
+  display: flex;
+  padding: 5px;
+  color: blue;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+table thead td {
+  font-weight: 700;
+}
+
+table tr .two,
+table tr .three {
+  flex: 1;
+}
+
+table tr .one,
+table tr .four {
+  flex: 2;
+}

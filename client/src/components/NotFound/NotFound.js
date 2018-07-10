@@ -1,12 +1,13 @@
 import React from "react";
+import "./NotFound.css";
 
 const NotFound = () => {
   return (
-    <div>
-      <h1>Page Not Found</h1>
+    <div className="not-found-container slide-top">
+      <h1>Nice try</h1>
       <p>
-        Sorry, but this page does not exist. Check the URL to make sure you
-        didn't make typo
+        This is the 404 page. If you check the layout.js file, you'll see how to
+        use a &lt;Switch /&gt; from react-router-dom to display 404 Components
       </p>
     </div>
   );

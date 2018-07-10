@@ -1,82 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import propTypes from "prop-types";
-import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
-import { clearCurrentProfile } from "../../actions/profileActions";
 
 import "./Navbar.css";
-import logo from "../../img/logo.png";
 
-class Navbar extends Component {
-  logoutUserHandler = e => {
-    e.preventDefault();
-    this.props.clearCurrentProfile();
-    this.props.logoutUser();
-  };
-
-  render() {
-    const { isAuthenticated, user } = this.props.auth;
-    const guestLinks = (
-      <React.Fragment>
-        <Link to="/register">
-          <li>Signup</li>
-        </Link>
-        <Link to="/login">
-          <li>Login</li>
-        </Link>
-      </React.Fragment>
-    );
-
-    const authLinks = (
-      <React.Fragment>
-        <Link to="/dashboard">
-          <li>Dashboard</li>
-        </Link>
-        <Link to="/feed">
-          <li>Post Feed</li>
-        </Link>
-        <a onClick={this.logoutUserHandler}>
-          <li className="user-nav">
-            <img
-              src={user.avatar}
-              alt={user.name}
-              title="You must have a gravatar connected via your email to display image"
-            />{" "}
-            Logout
-          </li>
-        </a>
-      </React.Fragment>
-    );
-
-    return (
-      <header>
-        <Link to="/">
-          <img id="logo" src={logo} alt="Logo" />
-        </Link>
-        <nav>
-          <ul id="nav-container">
-            <Link to="/profiles">
-              <li>Developers</li>
-            </Link>
-            {isAuthenticated ? authLinks : guestLinks}
-          </ul>
-        </nav>
-      </header>
-    );
-  }
-}
-
-Navbar.propTypes = {
-  logoutUser: propTypes.func.isRequired,
-  auth: propTypes.object.isRequired
+const Navbar = () => {
+  return (
+    <header>
+      <nav>
+        <ul>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/backend-routes">
+            <li>Backend Routes</li>
+          </Link>
+          <Link to="/react-basics">
+            <li>React Basics</li>
+          </Link>
+          <Link to="/redux-basics">
+            <li>Redux Basics</li>
+          </Link>
+        </ul>
+      </nav>
+    </header>
+  );
 };
 
-const mapStateToProps = state => ({
-  auth: state.auth
-});
-
-export default connect(
-  mapStateToProps,
-  { logoutUser, clearCurrentProfile }
-)(Navbar);
+export default Navbar;
