@@ -248,7 +248,7 @@ const ReactBasics = () => {
         visit my github and see what's new. You'll be able to clone the project
         again, or merge it depending on what your local project looks like.
       </p>
-      <p>Please feel free to contact me if you like, as well.</p>
+      <p>Please feel free to contact me if you like.</p>
       <p>email: davidm.dugger@gmail.com</p>
     </div>
   );

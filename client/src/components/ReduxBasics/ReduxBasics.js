@@ -201,6 +201,12 @@ const ReduxBasics = () => {
         If all you are doing is adding some data to the database in a form, then
         just do that in the local component.
       </p>
+      <p>
+        That will do it for now. I'll cover actual code samples when I have time
+        this week. So, you can look forward to actual code to create a Redux
+        store, write some actions with some types, send those actions to
+        reducers, then update the store.
+      </p>
     </div>
   );
 };
